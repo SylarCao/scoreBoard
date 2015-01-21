@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController">
+            <connections>
+                <outlet property="m_ib_btn_img" destination="j2Y-NC-jbO" id="XH8-wi-ZEg"/>
+                <outlet property="m_ib_btn_start" destination="FQK-Bw-tEH" id="JZd-4b-9aU"/>
+                <outlet property="m_ib_jh_view" destination="bJY-T3-7Xa" id="CRu-In-NJb"/>
+                <outlet property="m_ib_text_field" destination="7Xw-nP-ArY" id="Krh-4M-Q3B"/>
+                <outlet property="view" destination="1" id="ccv-m0-TeQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Xw-nP-ArY">
+                    <rect key="frame" x="60" y="85" width="200" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="MVj-FN-KLI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="TMI-Zy-QT9"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQK-Bw-tEH">
+                    <rect key="frame" x="80" y="359" width="160" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="hKq-Wh-L9N"/>
+                        <constraint firstAttribute="height" constant="60" id="vAU-2r-Oyw"/>
+                    </constraints>
+                    <state key="normal" title="开始">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="IBStart:" destination="-1" eventType="touchUpInside" id="UZd-w5-mOY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2Y-NC-jbO">
+                    <rect key="frame" x="102" y="182" width="116" height="116"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="welcome.png" backgroundImage="BackgroundTexture.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="welcome.png"/>
+                    <state key="highlighted" image="welcome.png" backgroundImage="BackgroundTexture.png"/>
+                    <connections>
+                        <action selector="IBBtnImgTouch:" destination="-1" eventType="touchUpInside" id="BzM-z6-ExP"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-T3-7Xa" customClass="JHTickerView">
+                    <rect key="frame" x="10" y="5" width="300" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0KL-1h-Fem"/>
+                        <constraint firstAttribute="width" constant="300" id="KGB-Za-fMl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="7Xw-nP-ArY" firstAttribute="top" secondItem="bJY-T3-7Xa" secondAttribute="bottom" constant="30" id="Bmb-bK-lly"/>
+                <constraint firstItem="FQK-Bw-tEH" firstAttribute="top" secondItem="j2Y-NC-jbO" secondAttribute="bottom" constant="61" id="Gjm-V5-mwF"/>
+                <constraint firstAttribute="centerY" secondItem="j2Y-NC-jbO" secondAttribute="centerY" id="Nq4-58-Wbu"/>
+                <constraint firstAttribute="centerX" secondItem="bJY-T3-7Xa" secondAttribute="centerX" id="P26-tk-T0Y"/>
+                <constraint firstItem="bJY-T3-7Xa" firstAttribute="top" secondItem="1" secondAttribute="top" constant="5" id="btH-8Z-smy"/>
+                <constraint firstAttribute="centerX" secondItem="FQK-Bw-tEH" secondAttribute="centerX" id="kF0-nw-pBu"/>
+                <constraint firstAttribute="centerX" secondItem="7Xw-nP-ArY" secondAttribute="centerX" id="kH5-br-A0N"/>
+                <constraint firstAttribute="centerX" secondItem="j2Y-NC-jbO" secondAttribute="centerX" id="kMn-D0-lSw"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="inQ-2D-3zv" appends="YES" id="0IH-zk-1NU"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="inQ-2D-3zv">
+            <connections>
+                <action selector="IBViewTap:" destination="-1" id="QZa-PD-Lhp"/>
+                <outlet property="delegate" destination="-1" id="01u-ub-kp0"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="BackgroundTexture.png" width="62" height="62"/>
+        <image name="welcome.png" width="116" height="116"/>
+    </resources>
+</document>
